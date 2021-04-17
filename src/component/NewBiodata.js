@@ -2,16 +2,16 @@ import { React } from "react";
 
 
 const NewBiodata = (props) => {
-    return(
+    return (
         <div>
             <p>new biodata</p>
-        <h3>Nama : {props.nama}</h3>
-        <p>Semester :  {props.semester} </p>
-        <div>
-            {props.hobi}
+            <h3>Nama : {props.nama}</h3>
+            <p>Semester :  {props.semester} </p>
+            <div>
+                {props.hobi}
+            </div>
+            <p>=========================================</p>
         </div>
-        <p>=========================================</p>
-    </div>
     )
 }
 
