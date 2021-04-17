@@ -1,6 +1,7 @@
 import Biodata from './component/Biodata';
 import Component1 from './component/Component1';
 import Component2 from './component/Component2';
+import NewBiodata from './component/NewBiodata';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
 <Biodata nama="fikri" semester="3" hobi={<Hobi/>} />
 <Biodata nama="isnaini" semester="5"/>
 
+
+<NewBiodata name="Fuad" />
     </div>
    
   );
