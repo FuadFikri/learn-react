@@ -4,6 +4,8 @@ import Component2 from './component/Component2';
 import Component4 from './component/Component4';
 
 import NewBiodata from './component/NewBiodata';
+import ClassComponent from './component/perbandingan/ClassComponent';
+import FunctionCompeent from './component/perbandingan/FunctionComponent';
 
 function App() {
   return (
@@ -25,6 +27,12 @@ function App() {
 
       <hr></hr>
       <Component4/>
+
+      <hr></hr>
+      
+      <FunctionCompeent/>
+      <hr/>
+      <ClassComponent/>
     </div>
 
   );
