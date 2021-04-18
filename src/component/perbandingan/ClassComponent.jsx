@@ -16,6 +16,12 @@ increment = () => {
     })
 }
 
+componentDidMount(){
+    this.setState({counter:100})
+}
+
+
+
     render() {
         return <div>ini class component
 

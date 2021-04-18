@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // performa lebih bagus function component
 const FunctionCompeent = () => {
     const [counter, setCounter] = useState(0);
+
+
+    // mounting pada function component
+    useEffect(()=> {
+        setCounter(100)
+    },[])
 
     return <div>ini functio component
 
