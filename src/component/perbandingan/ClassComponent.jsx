@@ -2,12 +2,12 @@ import React from 'react';
 
 class ClassComponent extends React.Component {
 
-state = {
-    counter:0
-}
+    state = {
+        counter: 0
+    }
 
-increment = () => {
-    this.setState(prev =>{
+    increment = () => {
+        this.setState(prev => {
 
         return {
             counter: prev.counter + 10
@@ -31,8 +31,10 @@ componentDidUpdate(prevProps, prevState){
     }
 }
 
+     
 
 
+    videoRef = React.createRef()
     render() {
         return <div>ini class component
 
@@ -40,6 +42,12 @@ componentDidUpdate(prevProps, prevState){
             <button onClick={this.increment}>
                 tambah
             </button>
+            <br />
+
+            <video ref={this.videoRef} src="https://www.w3schools.com/html/mov_bbb.mp4" />
+            <button onClick={() => this.videoRef.current.play()}>play</button>
+            <button onClick={() => this.videoRef.current.pause()}>stop</button>
+
         </div>
     }
 }

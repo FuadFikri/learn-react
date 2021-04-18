@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // performa lebih bagus function component
 const FunctionCompeent = () => {
@@ -21,12 +21,19 @@ const FunctionCompeent = () => {
         
     },[counter])
 
+    const videoRef = useRef()
+    
     return <div>ini functio component
 
         <div>jumlah = {counter}</div>
         <button onClick={() => setCounter(prevState => prevState + 10)}>
             Tambah
         </button>
+        <br />
+
+        <video ref={videoRef} src="https://www.w3schools.com/html/mov_bbb.mp4" />
+        <button onClick={() => videoRef.current.play()}>play</button>
+        <button onClick={() => videoRef.current.pause()}>stop</button>
     </div>
 }
 
