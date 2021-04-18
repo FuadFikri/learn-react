@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Biodata from './component/Biodata';
 import Component1 from './component/Component1';
 import Component2 from './component/Component2';
@@ -7,7 +8,10 @@ import NewBiodata from './component/NewBiodata';
 import ClassComponent from './component/perbandingan/ClassComponent';
 import FunctionCompeent from './component/perbandingan/FunctionComponent';
 
+
 function App() {
+
+  const [mount, setMount] = useState(false)
   return (
     <div>
 
@@ -26,13 +30,22 @@ function App() {
       <NewBiodata name="Fuad" />
 
       <hr></hr>
-      <Component4/>
+      <Component4 />
 
       <hr></hr>
-      
-      <FunctionCompeent/>
-      <hr/>
-      <ClassComponent/>
+
+      <FunctionCompeent />
+      <hr />
+      <ClassComponent />
+      <hr />
+      <b>unmount</b>
+
+      <br />
+      {mount && <FunctionCompeent />}
+
+      <button onClick={() => setMount(p => !p)}>
+        {mount ? "UnMount" : "Mount"}
+      </button>
     </div>
 
   );

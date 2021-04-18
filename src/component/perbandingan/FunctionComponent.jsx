@@ -8,6 +8,9 @@ const FunctionCompeent = () => {
     // mounting pada function component
     useEffect(()=> {
         setCounter(50)
+        return()=> {
+            document.title="unmounting"
+        }
     },[])
 
     useEffect(()=> {
@@ -15,6 +18,7 @@ const FunctionCompeent = () => {
             alert("nilai terpenuhi")
             setCounter(0)
         }
+        
     },[counter])
 
     return <div>ini functio component
