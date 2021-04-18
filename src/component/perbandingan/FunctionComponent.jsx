@@ -7,13 +7,20 @@ const FunctionCompeent = () => {
 
     // mounting pada function component
     useEffect(()=> {
-        setCounter(100)
+        setCounter(50)
     },[])
+
+    useEffect(()=> {
+        if(counter ===100) {
+            alert("nilai terpenuhi")
+            setCounter(0)
+        }
+    },[counter])
 
     return <div>ini functio component
 
         <div>jumlah = {counter}</div>
-        <button onClick={() => setCounter(prevState => prevState + 1)}>
+        <button onClick={() => setCounter(prevState => prevState + 10)}>
             Tambah
         </button>
     </div>

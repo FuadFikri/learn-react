@@ -17,7 +17,18 @@ increment = () => {
 }
 
 componentDidMount(){
-    this.setState({counter:100})
+    this.setState({counter:60})
+}
+
+
+// ketika ada props atau state yg update di react component
+componentDidUpdate(prevProps, prevState){
+    if(prevState.counter >= 100){
+        alert("nilai anda mencukupi")
+        this.setState({
+            counter:0
+        })
+    }
 }
 
 
